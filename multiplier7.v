@@ -2,7 +2,7 @@
 module multiplier7(
     clk,start,A,B,Product, ready
     );
-    parameter n = 31;
+    parameter n = 63;
     parameter n1 = 2 * ((n + 1) / 2);
     input start, clk;
     output ready;
@@ -42,4 +42,5 @@ module multiplier7(
         3'b111 : adder_output = ({{2{Product[(2 * n1 - 1)]}}, Product[(2 * n1 - 1):n1]});
     endcase
     end
+
 endmodule
